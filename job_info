@@ -20,3 +20,44 @@ def choose(xpath1):
         driver.find_element(By.XPATH,i).click()
 
 choose(xpath1)
+
+xpath2 = [
+    """//*[@id="sp_main_wrapper"]/div[2]/div/div[1]/div[2]/div[1]/button[6]""",
+    """//*[@id="sp_job_category_subDepth_2"]/div[2]/div/div[2]/div/dl[3]/dt/button/span""",
+]
+
+def choose(xpath2):
+    for i in xpath2:
+        driver.find_element(By.XPATH,i).click()
+        
+ choose(xpath2)
+ 
+ # 검색창에 파이썬을 검색
+query_txt = 'python'
+element = driver.find_element_by_id("job_category_ipt_keyword")
+element.send_keys(query_txt)
+time.sleep(1) 
+
+xpath3 = [
+    """//*[@id="autocomplete_has_result"]/div[1]/div[2]/div/ul/li[1]/div/label""",
+    """//*[@id="autocomplete_has_result"]/div[3]/button""",
+]
+
+def choose(xpath3):
+    for i in xpath3:
+        driver.find_element(By.XPATH,i).click()
+        
+ choose(xpath3)
+ 
+ xpath4 = [
+    """//*[@id="sp_main_wrapper"]/div[2]/ul/li[2]/button""",
+    """//*[@id="sp_area_lastDepth_101000"]/li[1]/div/label""",
+    """//*[@id="depth1_btn_102000"]/button/span[1]""",  
+    """//*[@id="search_btn"]""" 
+]
+
+def choose(xpath4):
+    for i in xpath4:
+        driver.find_element(By.XPATH,i).click()
+        
+ choose(xpath4)
