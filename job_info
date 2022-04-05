@@ -150,7 +150,7 @@ marker_cluster = plug.MarkerCluster().add_to(map)
 
 for n in df.index:
     folium.Marker([df['lat'][n], df['lng'][n]],
-                  popup = "<a href = 'https://www.saramin.co.kr{}' target =_'blink'><pre>{}</pre><a>".format(df['링크'][n], df['기업이름'][n]),
+                  popup = "<a href = 'https://www.saramin.co.kr{}' target =_'blink'><pre>{}<br>{}</br></pre><a>".format(df['링크'][n], df['기업이름'][n], df['공고제목'][n]),
                   tooltip = df['기업이름'][n]).add_to(marker_cluster)
     
 map
